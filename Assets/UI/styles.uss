@@ -1,0 +1,211 @@
+VisualElement {
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.derecha {
+    flex-grow: 1;
+    background-color: rgb(22, 16, 16);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    translate: 0% 0;
+    transition-duration: 0.5s;
+}
+
+.izq {
+    width: auto;
+    min-width: 300px;
+    max-width: 500px;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url("project://database/Assets/imagenes/Logo-VERTICAL.png?fileID=21300000&guid=5f3011255afbbbe4c94fc9713e73c996&type=3#Logo-VERTICAL");
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
+
+.botones {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    -unity-text-align: upper-left;
+    width: 100%;
+    align-items: center;
+}
+
+.botones-menu {
+    background-color: rgba(98, 213, 51, 0.98);
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 80%;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    color: rgb(11, 10, 10);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    align-items: stretch;
+    -unity-text-align: upper-center;
+}
+
+.botones-menu:hover {
+    background-color: rgb(57, 63, 57);
+    color: rgb(236, 231, 231);
+    width: 115%;
+}
+
+.footer-logo {
+    background-image: url("project://database/Assets/imagenes/gafas_realidad_virtual_meta_quest_2-removebg-preview.png?fileID=21300000&guid=aeb0c2cc124220f46aa033aea94ee243&type=3#gafas_realidad_virtual_meta_quest_2-removebg-preview");
+    width: 250px;
+    height: 100px;
+    margin-bottom: 10px;
+    -unity-text-align: upper-center;
+}
+
+.footer-texto {
+    margin-bottom: 30px;
+    color: rgb(243, 237, 237);
+    -unity-text-align: upper-center;
+    -unity-font-definition: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+    white-space: normal;
+}
+
+.terapias {
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.terapias-titulo {
+    color: rgb(117, 186, 61);
+    font-size: 35px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    -unity-text-align: upper-center;
+    align-items: center;
+    justify-content: center;
+    -unity-slice-scale: 1px;
+    margin-left: 0;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    -unity-font-style: normal;
+}
+
+.volver {
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    background-color: rgb(44, 205, 32);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-wrap: nowrap;
+    width: 20%;
+    height: 10%;
+    -unity-font-style: bold;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.terapy {
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.terapy123 {
+    width: 200px;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.terapyizq {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    align-self: center;
+}
+
+.terapy-dere {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.derecha-activo {
+}
+
+.derecha.derecha-activo {
+}
+
+.login {
+    height: 100%;
+    align-items: center;
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.letrasColor {
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    color: rgb(83, 224, 62);
+    -unity-text-align: middle-center;
+}
