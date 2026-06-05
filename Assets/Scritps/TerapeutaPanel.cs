@@ -6,6 +6,7 @@ public class TerapeutaPanel : MonoBehaviour
     void Start()
     {
         //Comenté esta linea como prueba de uso GIT
+        //segunda prueba del GIT SOLA
     }
 
     // Update is called once per frame
