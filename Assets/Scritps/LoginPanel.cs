@@ -100,12 +100,12 @@ public class LoginPanel : MonoBehaviour
                 if (usuario.rol == "terapeuta")
                 {
                     Debug.Log("Redirigiendo a panel de TERAPEUTA");
-                    // Cargar escena de terapeuta
+                    ActivarPanelTerapeuta(); // Cargar escena de terapeuta
                 }
                 else if (usuario.rol == "paciente")
                 {
                     Debug.Log(" Redirigiendo a panel de PACIENTE");
-                    // Cargar escena de paciente
+                    ActivarPanelPaciente();// Cargar escena de paciente
                 }
             }
             // Error 401: Contraseña incorrecta
@@ -137,7 +137,56 @@ public class LoginPanel : MonoBehaviour
             mensajeLabel.style.color = esExito ? Color.green : Color.red;
         }
     }
+    private void ActivarPanelTerapeuta()
+    {
+        var root = GetComponent<UIDocument>().rootVisualElement;
+
+        var loginContainer = root.Q<VisualElement>("login");
+        var contenidoTerapeuta = root.Q<VisualElement>("contenido-terapeuta");
+        var contenidoPaciente = root.Q<VisualElement>("contenido-paciente");
+
+        if (loginContainer != null)
+            loginContainer.style.display = DisplayStyle.None;
+
+        if (contenidoPaciente != null)
+            contenidoPaciente.style.display = DisplayStyle.None;
+
+        if (contenidoTerapeuta != null)
+            contenidoTerapeuta.style.display = DisplayStyle.Flex;
+
+        var terapeutaPanel = GetComponent<TerapeutaPanel>();
+        if (terapeutaPanel != null)
+        {
+            terapeutaPanel.CargarListaPacientes();
+        }
+    }
+
+    private void ActivarPanelPaciente()
+    {
+        var root = GetComponent<UIDocument>().rootVisualElement;
+
+        var loginContainer = root.Q<VisualElement>("login");
+        var contenidoTerapeuta = root.Q<VisualElement>("contenido-terapeuta");
+        var contenidoPaciente = root.Q<VisualElement>("contenido-paciente");
+
+        if (loginContainer != null)
+            loginContainer.style.display = DisplayStyle.None;
+
+        if (contenidoTerapeuta != null)
+            contenidoTerapeuta.style.display = DisplayStyle.None;
+
+        if (contenidoPaciente != null)
+            contenidoPaciente.style.display = DisplayStyle.Flex;
+
+        var saludo = root.Q<Label>("saludo-paciente");
+        if (saludo != null && LoginManager.UsuarioActual != null)
+        {
+            saludo.text = $"¡Bienvenido, {LoginManager.UsuarioActual.nombre}!";
+        }
+    }
 }
+
+
 
 // Clase para recibir datos del usuario
 [System.Serializable]

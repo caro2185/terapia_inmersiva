@@ -444,6 +444,7 @@ GameObject:
   - component: {fileID: 1521186787}
   - component: {fileID: 1521186789}
   - component: {fileID: 1521186790}
+  - component: {fileID: 1521186791}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -513,6 +514,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1fc6eecf31a8d4caecca91bec8d39a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LoginPanel
+--- !u!114 &1521186791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521186786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9367f37e745f34480c778ec361ae1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TerapeutaPanel
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
