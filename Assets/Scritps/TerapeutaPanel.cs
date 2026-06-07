@@ -108,19 +108,47 @@ public class TerapeutaPanel : MonoBehaviour
                 string respuesta = request.downloadHandler.text;
                 Debug.Log($"Pacientes recibidos: {respuesta}");
 
-                // Limpiar la lista actual
+                // ============================================
+                // NOTA: Limpiar la lista actual
+                // ============================================
                 listaPacientes.Clear();
 
-                // Por ahora mostramos un mensaje (después parsearemos el JSON)
-                var label = new Label("Lista de pacientes (próximamente)");
-                label.style.color = Color.white;
-                label.style.marginTop = 10;
-                listaPacientes.Add(label);
+                // ============================================
+                // NOTA: Convertir el JSON array a un objeto usable
+                // La API devuelve: [{...}, {...}, ...]
+                // Lo envolvemos en un objeto con propiedad "pacientes"
+                // ============================================
+                string jsonArray = "{\"pacientes\":" + respuesta + "}";
+                PacienteListWrapper wrapper = JsonUtility.FromJson<PacienteListWrapper>(jsonArray);
+
+                // ============================================
+                // NOTA: Verificar si hay pacientes
+                // ============================================
+                if (wrapper.pacientes == null || wrapper.pacientes.Length == 0)
+                {
+                    var label = new Label("No hay pacientes registrados aún.\nPresiona 'Registrar Paciente' para agregar.");
+                    label.style.color = Color.gray;
+                    label.style.unityTextAlign = TextAnchor.MiddleCenter;
+                    label.style.paddingTop = 20;
+                    listaPacientes.Add(label);
+                    yield break;
+                }
+
+                // ============================================
+                // NOTA: Crear un elemento visual por cada paciente
+                // ============================================
+                foreach (var paciente in wrapper.pacientes)
+                {
+                    VisualElement contenedor = CrearElementoPaciente(paciente);
+                    listaPacientes.Add(contenedor);
+                }
+
+                Debug.Log($"Mostrando {wrapper.pacientes.Length} pacientes en la lista");
             }
             else
             {
                 Debug.LogError($"Error al cargar pacientes: {request.error}");
-                var label = new Label($"Error: {request.error}");
+                var label = new Label($"Error de conexión: {request.error}");
                 label.style.color = Color.red;
                 listaPacientes.Add(label);
             }
@@ -246,9 +274,56 @@ public class TerapeutaPanel : MonoBehaviour
         var mensajeLogin = root.Q<Label>("mensaje-login");
         if (mensajeLogin != null) mensajeLogin.text = "";
     }
+
+    // ============================================
+    // CREAR ELEMENTO VISUAL PARA CADA PACIENTE
+    // ============================================
+    private VisualElement CrearElementoPaciente(PacienteData paciente)
+    {
+        var contenedor = new VisualElement();
+        contenedor.style.marginBottom = 10;
+        contenedor.style.paddingLeft = 8;
+        contenedor.style.paddingRight = 8;
+        contenedor.style.paddingTop = 8;
+        contenedor.style.paddingBottom = 8;
+        contenedor.style.backgroundColor = new Color(0.35f, 0.35f, 0.4f);
+        contenedor.style.borderTopLeftRadius = 8;
+        contenedor.style.borderTopRightRadius = 8;
+        contenedor.style.borderBottomLeftRadius = 8;
+        contenedor.style.borderBottomRightRadius = 8;
+        contenedor.style.flexDirection = FlexDirection.Row;
+        contenedor.style.alignItems = Align.Center;
+        contenedor.style.justifyContent = Justify.SpaceBetween;
+
+        var infoLabel = new Label($"{paciente.nombre}\n   {paciente.cedula} | {paciente.edad} años");
+        infoLabel.style.color = Color.white;
+        infoLabel.style.fontSize = 14;
+
+        var btnProgreso = new Button();
+        btnProgreso.text = "Ver progreso";
+        btnProgreso.style.backgroundColor = new Color(0.2f, 0.5f, 0.8f);
+        btnProgreso.style.color = Color.white;
+        btnProgreso.style.paddingLeft = 10;
+        btnProgreso.style.paddingRight = 10;
+        btnProgreso.style.paddingTop = 5;
+        btnProgreso.style.paddingBottom = 5;
+        btnProgreso.style.borderTopLeftRadius = 5;
+        btnProgreso.style.borderTopRightRadius = 5;
+        btnProgreso.style.borderBottomLeftRadius = 5;
+        btnProgreso.style.borderBottomRightRadius = 5;
+
+        btnProgreso.clicked += () => {
+            Debug.Log($"Ver progreso del paciente: {paciente.nombre} (ID: {paciente.id})");
+        };
+
+        contenedor.Add(infoLabel);
+        contenedor.Add(btnProgreso);
+
+        return contenedor;
+    }
 }
 
-// Clase para enviar el registro del paciente
+// Clase para enviar el registro del paciente POST
 [System.Serializable]
 public class PacienteRegistro
 {
@@ -258,4 +333,28 @@ public class PacienteRegistro
     public int edad;
     public string contraseña;
     public string id_terapeuta;
+}
+
+// ============================================
+// CLASE PARA RECIBIR DATOS DEL PACIENTE DESDE LA API (GET)
+// ============================================
+[System.Serializable]
+public class PacienteData
+{
+    public string id;           // ID en MongoDB (lo genera la BD)
+    public string cedula;       // Cédula del paciente
+    public string nombre;       // Nombre completo
+    public string email;        // Correo electrónico
+    public int edad;            // Edad
+    public string rol;          // "paciente"
+    public string id_terapeuta; // ID del terapeuta que lo creó
+}
+
+// ============================================
+// CLASE AYUDANTE PARA PARSEAR EL ARRAY DE PACIENTES
+// ============================================
+[System.Serializable]
+public class PacienteListWrapper
+{
+    public PacienteData[] pacientes;
 }
