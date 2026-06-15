@@ -25,7 +25,7 @@
                 </ui:VisualElement>
                 <ui:Button text="VOLVER" name="volver" parse-escape-sequences="true" class="volver"/>
             </ui:VisualElement>
-            <ui:VisualElement name="login" class="login" style="flex-grow: 1; display: none;">
+            <ui:VisualElement name="login" class="login" style="flex-grow: 1; display: flex;">
                 <ui:Label text="INICIAR SESIÓN" name="titulo-login" class="botones-menu" style="color: rgb(108, 230, 22); align-items: center; width: 30%; background-color: rgba(13, 12, 12, 0.98); margin-bottom: 20px; font-size: 50px;"/>
                 <ui:TextField label="USUARIO" placeholder-text="filler text" name="login-usuario" style="color: rgb(17, 234, 21); -unity-font-definition: url(&quot;project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&amp;guid=0f11804e4dba3704d975b2c9b97ef037&amp;type=3#Orbitron-Regular&quot;); align-items: center; flex-direction: row; justify-content: flex-start; -unity-text-align: upper-center;"/>
                 <ui:TextField label="CONTRASEÑA" placeholder-text="filler text" name="login-password" password="true" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&amp;guid=0f11804e4dba3704d975b2c9b97ef037&amp;type=3#Orbitron-Regular&quot;); color: rgb(89, 236, 39); -unity-text-align: upper-center;"/>
@@ -51,7 +51,7 @@
                     <ui:Label text="Label" name="reg-mensaje"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="contenido-paciente" style="flex-grow: 1; display: flex;">
+            <ui:VisualElement name="contenido-paciente" style="flex-grow: 1; display: none;">
                 <ui:Label text="Label" name="saludo-paciente" class="letrasColor"/>
                 <ui:VisualElement name="menu-terapias" style="flex-grow: 1;">
                     <ui:Label text=" SELECCIONA TU TERAPIA" class="letrasColor"/>
