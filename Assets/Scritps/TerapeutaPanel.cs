@@ -320,7 +320,7 @@ public class TerapeutaPanel : MonoBehaviour
         contenedor.Add(btnProgreso);
 
         return contenedor;
-    }
+    } 
 }
 
 // Clase para enviar el registro del paciente POST

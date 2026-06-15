@@ -51,25 +51,6 @@
                     <ui:Label text="Label" name="reg-mensaje"/>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="contenido-paciente" style="flex-grow: 1; display: none;">
-                <ui:Label text="Label" name="saludo-paciente" class="letrasColor"/>
-                <ui:VisualElement name="menu-terapias" style="flex-grow: 1;">
-                    <ui:Label text=" SELECCIONA TU TERAPIA" class="letrasColor"/>
-                    <ui:Button text="Terapia 1" name="btn-terapia1"/>
-                    <ui:Button text="Terapia 2" name="btn-terapia2"/>
-                    <ui:Button text="Terapia 3" name="btn-terapia3"/>
-                    <ui:Button text="Ver mi progreso" name="btn-ver-progreso"/>
-                </ui:VisualElement>
-                <ui:VisualElement name="ejercicio-activo" class="letrasColor" style="flex-grow: 1;">
-                    <ui:Label text="Label" name="titulo-ejercicio"/>
-                    <ui:Label text="Sigue las instrucciones...." name="instrucciones"/>
-                    <ui:Label text="&quot;Precisión: 0%&quot;" name="precision-label"/>
-                    <ui:Label text="&quot;Tiempo: 0s&quot;" name="tiempo-label"/>
-                    <ui:Button text="Terminar Terapia" name="btn-terminar-terapia" selectable="true" style="color: rgb(26, 26, 26);"/>
-                </ui:VisualElement>
-                <ui:ScrollView name="progreso-lista"/>
-                <ui:Button text=" Cerrar Sesión" name="btn-cerrar-sesion-paciente"/>
-            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

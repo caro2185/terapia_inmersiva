@@ -5,53 +5,58 @@ using System.Collections;
 
 public class LoginPanel : MonoBehaviour
 {
-    // URL de tu API (cambia el puerto si es necesario)
+    // ============================================
+    // URL DE LA API (cambia el puerto si es necesario)
+    // ============================================
     private string apiUrl = "http://localhost:5276/api/Usuarios";
 
-    // Referencias a los elementos de la UI
+    // ============================================
+    // REFERENCIAS A LA UI
+    // ============================================
     private TextField cedulaInput;
     private TextField contraseñaInput;
     private Button loginBoton;
     private Label mensajeLabel;
 
+    // ============================================
+    // SE EJECUTA AL ACTIVAR EL PANEL
+    // ============================================
     private void OnEnable()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
-        // Buscar los elementos por su nombre
+        // Buscar elementos por su nombre
         cedulaInput = root.Q<TextField>("login-usuario");
         contraseñaInput = root.Q<TextField>("login-password");
         loginBoton = root.Q<Button>("login-boton");
         mensajeLabel = root.Q<Label>("mensaje-login");
 
-        // Configurar campo de contraseña
+        // Configurar campo de contraseña (oculta el texto)
         if (contraseñaInput != null)
-        {
             contraseñaInput.isPasswordField = true;
-        }
 
-        // Conectar el botón
+        // Conectar el botón al método de inicio de sesión
         if (loginBoton != null)
-        {
             loginBoton.clicked += IniciarSesion;
-        }
     }
 
+    // ============================================
+    // SE EJECUTA AL DESACTIVAR EL PANEL
+    // ============================================
     private void OnDisable()
     {
         if (loginBoton != null)
-        {
             loginBoton.clicked -= IniciarSesion;
-        }
     }
 
+    // ============================================
+    // VALIDAR CAMPOS Y LLAMAR AL LOGIN
+    // ============================================
     private void IniciarSesion()
     {
-        // Obtener valores
         string cedula = cedulaInput?.value;
         string contraseña = contraseñaInput?.value;
 
-        // Validaciones
         if (string.IsNullOrEmpty(cedula))
         {
             MostrarMensaje("Ingresa la cédula", false);
@@ -68,127 +73,108 @@ public class LoginPanel : MonoBehaviour
         StartCoroutine(LoginRequest(cedula, contraseña));
     }
 
+    // ============================================
+    // PETICIÓN A LA API PARA VALIDAR CREDENCIALES
+    // ============================================
     private IEnumerator LoginRequest(string cedula, string contraseña)
     {
-        // Endpoint de login por cédula
         string url = $"{apiUrl}/login/{cedula}?contrasena={contraseña}";
 
         using (UnityWebRequest request = UnityWebRequest.Get(url))
         {
             yield return request.SendWebRequest();
 
-            // Éxito (200)
+            // ========================================
+            // CASO 1: LOGIN EXITOSO (200)
+            // ========================================
             if (request.result == UnityWebRequest.Result.Success)
             {
-                string respuesta = request.downloadHandler.text;
-                Debug.Log($"Login exitoso: {respuesta}");
+                UsuarioData usuario = JsonUtility.FromJson<UsuarioData>(request.downloadHandler.text);
 
-                // Parsear respuesta
-                UsuarioData usuario = JsonUtility.FromJson<UsuarioData>(respuesta);
+                // Solo terapeutas pueden iniciar sesión
+                if (usuario.rol != "terapeuta")
+                {
+                    MostrarMensaje("Acceso no autorizado", false);
+                    LimpiarCampos();
+                    yield break;
+                }
 
-                // Guardar usuario logueado
                 LoginManager.UsuarioActual = usuario;
-
-                // Mostrar mensaje de bienvenida con el nombre real
-                MostrarMensaje($"¡Bienvenido {usuario.nombre}!", true);
-
-                // Limpiar campos
-                cedulaInput.value = "";
-                contraseñaInput.value = "";
-
-                // Redirigir según rol
-                if (usuario.rol == "terapeuta")
-                {
-                    Debug.Log("Redirigiendo a panel de TERAPEUTA");
-                    ActivarPanelTerapeuta(); // Cargar escena de terapeuta
-                }
-                else if (usuario.rol == "paciente")
-                {
-                    Debug.Log(" Redirigiendo a panel de PACIENTE");
-                    ActivarPanelPaciente();// Cargar escena de paciente
-                }
+                MostrarMensaje($"Bienvenido {usuario.nombre}", true);
+                LimpiarCampos();
+                ActivarPanelTerapeuta();
             }
-            // Error 401: Contraseña incorrecta
+            // ========================================
+            // CASO 2: CONTRASEÑA INCORRECTA (401)
+            // ========================================
             else if (request.responseCode == 401)
             {
-                MostrarMensaje(" Contraseña incorrecta", false);
-                Debug.LogWarning("Login fallido: Contraseña incorrecta");
+                MostrarMensaje("Contraseña incorrecta", false);
+                LimpiarCampos();
             }
-            // Error 404: Usuario no encontrado
+            // ========================================
+            // CASO 3: USUARIO NO EXISTE (404)
+            // ========================================
             else if (request.responseCode == 404)
             {
                 MostrarMensaje("Cédula no registrada", false);
-                Debug.LogWarning("Login fallido: Cédula no existe");
+                LimpiarCampos();
             }
-            // Otros errores
+            // ========================================
+            // CASO 4: ERROR DE CONEXIÓN
+            // ========================================
             else
             {
-                MostrarMensaje(" Error de conexión", false);
-                Debug.LogError($"Error en login: {request.error}");
+                MostrarMensaje("Error de conexión", false);
             }
         }
     }
 
+    // ============================================
+    // MOSTRAR MENSAJE EN LA UI
+    // ============================================
     private void MostrarMensaje(string mensaje, bool esExito)
     {
-        if (mensajeLabel != null)
-        {
-            mensajeLabel.text = mensaje;
-            mensajeLabel.style.color = esExito ? Color.green : Color.red;
-        }
+        if (mensajeLabel == null) return;
+
+        mensajeLabel.text = mensaje;
+        mensajeLabel.style.color = esExito ? Color.green : Color.red;
     }
+
+    // ============================================
+    // ACTIVAR PANEL DEL TERAPEUTA
+    // ============================================
     private void ActivarPanelTerapeuta()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
         var loginContainer = root.Q<VisualElement>("login");
         var contenidoTerapeuta = root.Q<VisualElement>("contenido-terapeuta");
-        var contenidoPaciente = root.Q<VisualElement>("contenido-paciente");
 
         if (loginContainer != null)
             loginContainer.style.display = DisplayStyle.None;
-
-        if (contenidoPaciente != null)
-            contenidoPaciente.style.display = DisplayStyle.None;
 
         if (contenidoTerapeuta != null)
             contenidoTerapeuta.style.display = DisplayStyle.Flex;
 
         var terapeutaPanel = GetComponent<TerapeutaPanel>();
         if (terapeutaPanel != null)
-        {
             terapeutaPanel.CargarListaPacientes();
-        }
     }
 
-    private void ActivarPanelPaciente()
+    // ============================================
+    // LIMPIAR CAMPOS DEL FORMULARIO
+    // ============================================
+    private void LimpiarCampos()
     {
-        var root = GetComponent<UIDocument>().rootVisualElement;
-
-        var loginContainer = root.Q<VisualElement>("login");
-        var contenidoTerapeuta = root.Q<VisualElement>("contenido-terapeuta");
-        var contenidoPaciente = root.Q<VisualElement>("contenido-paciente");
-
-        if (loginContainer != null)
-            loginContainer.style.display = DisplayStyle.None;
-
-        if (contenidoTerapeuta != null)
-            contenidoTerapeuta.style.display = DisplayStyle.None;
-
-        if (contenidoPaciente != null)
-            contenidoPaciente.style.display = DisplayStyle.Flex;
-
-        var saludo = root.Q<Label>("saludo-paciente");
-        if (saludo != null && LoginManager.UsuarioActual != null)
-        {
-            saludo.text = $"¡Bienvenido, {LoginManager.UsuarioActual.nombre}!";
-        }
+        if (cedulaInput != null) cedulaInput.value = "";
+        if (contraseñaInput != null) contraseñaInput.value = "";
     }
 }
 
-
-
-// Clase para recibir datos del usuario
+// ============================================
+// CLASE PARA RECIBIR DATOS DEL USUARIO DESDE LA API
+// ============================================
 [System.Serializable]
 public class UsuarioData
 {
