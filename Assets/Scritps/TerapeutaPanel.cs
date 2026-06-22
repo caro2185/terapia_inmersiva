@@ -12,6 +12,7 @@ public class TerapeutaPanel : MonoBehaviour
     private Button btnAbrirRegistro;
     private Button btnCerrarSesion;
     private VisualElement formRegistro;
+    private Button btnCerrarFormX; // <--- NUEVA VARIABLE
     private Label mensajeLabel;
 
     // Campos del formulario
@@ -32,6 +33,7 @@ public class TerapeutaPanel : MonoBehaviour
         btnAbrirRegistro = root.Q<Button>("btn-abrir-registro");
         btnCerrarSesion = root.Q<Button>("btn-cerrar-sesion-terapeuta");
         formRegistro = root.Q<VisualElement>("form-registro");
+        btnCerrarFormX = root.Q<Button>("btn-cerrar-x"); // <--- NUEVA BÚSQUEDA
         mensajeLabel = root.Q<Label>("reg-mensaje");
 
         // Campos del formulario de registro
@@ -50,7 +52,11 @@ public class TerapeutaPanel : MonoBehaviour
 
         // Conectar eventos
         if (btnAbrirRegistro != null)
-            btnAbrirRegistro.clicked += () => MostrarFormularioRegistro(true);
+            btnAbrirRegistro.clicked += AbrirModalRegistro;
+
+        // Conectamos la X con el método que cierra la ventana
+        if (btnCerrarFormX != null)
+            btnCerrarFormX.clicked += CerrarModalRegistro;
 
         if (btnGuardarRegistro != null)
             btnGuardarRegistro.clicked += RegistrarPaciente;
@@ -58,21 +64,36 @@ public class TerapeutaPanel : MonoBehaviour
         if (btnCerrarSesion != null)
             btnCerrarSesion.clicked += CerrarSesion;
 
-        // Ocultar formulario al inicio
-        MostrarFormularioRegistro(false);
+        // Aseguramos que empiece oculto
+        AlternarModal(formRegistro, false);
     }
 
     private void OnDisable()
     {
         // Desconectar eventos (buena práctica)
         if (btnAbrirRegistro != null)
-            btnAbrirRegistro.clicked -= () => MostrarFormularioRegistro(true);
+            btnAbrirRegistro.clicked -= AbrirModalRegistro;
+
+        if (btnCerrarFormX != null)
+            btnCerrarFormX.clicked -= CerrarModalRegistro; // <--- NUEVA DESCONEXIÓN
 
         if (btnGuardarRegistro != null)
             btnGuardarRegistro.clicked -= RegistrarPaciente;
 
         if (btnCerrarSesion != null)
             btnCerrarSesion.clicked -= CerrarSesion;
+    }
+
+    private void AbrirModalRegistro() => AlternarModal(formRegistro, true);
+    private void CerrarModalRegistro() => AlternarModal(formRegistro, false);
+
+    // Método genérico y ultra escalable para tus futuras ventanas emergentes
+    private void AlternarModal(VisualElement modal, bool mostrar)
+    {
+        if (modal != null)
+        {
+            modal.style.display = mostrar ? DisplayStyle.Flex : DisplayStyle.None;
+        }
     }
 
     private void MostrarFormularioRegistro(bool mostrar)

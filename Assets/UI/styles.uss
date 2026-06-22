@@ -201,6 +201,7 @@ VisualElement {
     width: 100%;
     justify-content: center;
     margin-bottom: 0;
+    aspect-ratio: auto;
 }
 
 .letrasColor {
