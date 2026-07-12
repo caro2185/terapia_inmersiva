@@ -445,6 +445,7 @@ GameObject:
   - component: {fileID: 1521186789}
   - component: {fileID: 1521186790}
   - component: {fileID: 1521186791}
+  - component: {fileID: 1521186792}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -526,6 +527,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9367f37e745f34480c778ec361ae1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TerapeutaPanel
+--- !u!114 &1521186792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521186786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 975f7ec4953746b47a479374e2e072ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PruebaGrafica
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -210,3 +210,25 @@ VisualElement {
     color: rgb(83, 224, 62);
     -unity-text-align: middle-center;
 }
+
+/* El plano cartesiano de tu dibujo */
+.plano-prueba {
+    width: 140px;
+    height: 200px;
+    background-color: rgba(45, 45, 45, 0.3);
+    border-bottom-width: 2px;
+    border-left-width: 2px;
+    border-color: #ffffff;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* El punto flotante discreto */
+.punto-prueba {
+    width: 14px;
+    height: 14px;
+    background-color: #00E676; /* Verde brillante UIS */
+    border-radius: 50%; /* Lo hace un círculo perfecto */
+    position: absolute;
+    bottom: 0%; /* C# cambiará esto de 0% a 100% */
+}

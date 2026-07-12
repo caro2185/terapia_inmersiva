@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scritps\TerapeutaPanel.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scritps\LoginPanel.cs" />
+    <Compile Include="Assets\Scritps\PruebaGrafica.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI\styles.uss" />
