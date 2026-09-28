@@ -232,3 +232,32 @@ VisualElement {
     position: absolute;
     bottom: 0%; /* C# cambiará esto de 0% a 100% */
 }
+
+/* Títulos de los ejes (Eficacia y Tiempo) */
+.label-eje {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    -unity-font-style: bold;
+}
+
+/* El número que flota sobre el punto */
+.label-dato-punto {
+    color: #00E676; /* El mismo verde que el punto */
+    font-size: 14px;
+    -unity-font-style: bold;
+    position: absolute;
+    bottom: 20px; /* Se posiciona un poco arriba del punto */
+    white-space: nowrap;
+}
+
+/* Contenedor para centrar el label sobre el punto */
+.contenedor-punto-dinamico {
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 0%; /* C# moverá todo este contenedor */
+    transition-property: bottom;
+    transition-duration: 0.6s;
+}
