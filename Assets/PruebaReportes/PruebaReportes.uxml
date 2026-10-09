@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="PruebaReportes.uss" />
+    <ui:VisualElement name="raiz" class="pr-raiz">
+        <ui:VisualElement name="tarjeta-reportes" class="pr-tarjeta">
+            <ui:Label text="Evolución del Paciente" name="titulo" class="pr-titulo" />
+            <ui:ScrollView name="reportes-contenido" mode="Vertical" horizontal-scroller-visibility="Hidden" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

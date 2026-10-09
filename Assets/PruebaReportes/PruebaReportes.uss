@@ -1,0 +1,319 @@
+/* ============================================================
+   PruebaReportes.uss
+   Parte 1: diseño de la pantalla de prueba.
+   Parte 2 (más abajo): estilos del informe, iguales a reportes.uss.
+   ============================================================ */
+
+.pr-raiz {
+    flex-grow: 1;
+    align-items: center;
+    background-color: rgb(18, 20, 24);
+    padding: 24px;
+}
+
+.pr-tarjeta {
+    flex-grow: 1;
+    width: 100%;
+    max-width: 860px;
+    background-color: rgb(30, 32, 40);
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.pr-titulo {
+    font-size: 28px;
+    color: rgb(108, 208, 46);
+    -unity-font-style: bold;
+    margin: 0 0 10px 0;
+}
+
+/* ============================================================
+   Parte 2: estilos del informe
+   ============================================================ */
+
+/* ============================================================
+   REPORTES: pegar al FINAL de styles.uss
+   Antes, borrar las reglas viejas de la gráfica:
+   #puntos-container, #etiquetas-eje-x, .punto-grafico (y :hover),
+   .puntaje-tooltip (y :hover), .etiqueta-sesion-x, .label-eje, .plano-prueba
+   ============================================================ */
+
+#reportes-contenido {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 6px 16px;
+}
+
+/* ---------- Pestañas de terapia ---------- */
+.rp-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.rp-tab {
+    background-color: rgb(40, 40, 50);
+    color: rgb(235, 240, 232);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 0 8px 8px 0;
+    -unity-font-style: bold;
+}
+
+.rp-tab:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-tab.rp-tab--activa {
+    background-color: rgb(108, 208, 46);
+    border-color: rgb(108, 208, 46);
+    color: rgb(20, 26, 18);
+}
+
+/* ---------- Filtros de fecha ---------- */
+.rp-filtros {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.rp-campo {
+    margin: 0 10px 6px 0;
+}
+
+.rp-etq {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.rp-fecha {
+    width: 112px;
+    margin: 0;
+}
+
+.rp-fecha .unity-base-text-field__input {
+    background-color: rgb(24, 24, 32);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.rp-btn {
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: 0 8px 6px 0;
+    font-size: 12px;
+}
+
+.rp-btn:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-btn.rp-btn--activo {
+    border-color: rgb(108, 208, 46);
+    background-color: rgba(108, 208, 46, 0.22);
+}
+
+.rp-error {
+    color: rgb(255, 90, 82);
+    font-size: 12px;
+    margin: 0 0 6px 0;
+    padding: 0;
+    white-space: normal;
+}
+
+/* ---------- Resumen ---------- */
+.rp-resumen {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    white-space: normal;
+    margin: 4px 0 10px 0;
+    padding: 0;
+}
+
+/* ---------- Gráfica ---------- */
+.rp-grafica {
+    background-color: rgb(24, 24, 32);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    min-height: 300px;
+    flex-direction: column;
+}
+
+.rp-leyenda {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8px 0 14px 0;
+}
+
+.rp-leyenda-item {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 12px 4px 0;
+}
+
+.rp-leyenda-texto {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    padding: 0;
+}
+
+.rp-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+/* ---------- Detalle del día ---------- */
+.rp-detalle {
+    margin-bottom: 12px;
+}
+
+.rp-detalle-cab {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.rp-detalle-textos {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.rp-detalle-titulo {
+    color: white;
+    font-size: 15px;
+    -unity-font-style: bold;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.rp-detalle-sub {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
+    margin: 2px 0 0 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.rp-nav {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.rp-nav-btn {
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin: 0 0 0 6px;
+    -unity-font-style: bold;
+}
+
+.rp-nav-btn:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-nav-btn:disabled {
+    opacity: 0.35;
+}
+
+.rp-vacio {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    white-space: normal;
+    margin: 6px 0;
+}
+
+/* ---------- Tabla ---------- */
+.rp-tabla {
+    background-color: rgb(24, 24, 32);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.rp-fila {
+    flex-direction: row;
+    flex-shrink: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.rp-fila:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.rp-fila--cab {
+    background-color: rgb(36, 40, 46);
+}
+
+.rp-fila--pie {
+    background-color: rgb(36, 40, 46);
+    border-bottom-width: 0;
+}
+
+.rp-celda {
+    color: rgb(225, 232, 222);
+    font-size: 12px;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    margin: 0;
+    padding: 7px 6px;
+    flex-shrink: 0;
+}
+
+.rp-fila--cab .rp-celda {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 10px;
+    -unity-font-style: bold;
+}
+
+.rp-fila--pie .rp-celda,
+.rp-fila--pie .rp-celda-texto {
+    -unity-font-style: bold;
+}
+
+.rp-celda--alerta {
+    color: rgb(255, 110, 100);
+}
+
+.rp-celda--notas {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.rp-celda-puntaje {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 6px;
+}
+
+.rp-celda-texto {
+    color: rgb(225, 232, 222);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}

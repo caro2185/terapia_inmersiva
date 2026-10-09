@@ -1,0 +1,78 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/DashboardStyles.uss?fileID=7433441132597879392&amp;guid=06576dab2d56f694781762810229ddcf&amp;type=3#DashboardStyles"/>
+    <ui:VisualElement name="header" style="flex-grow: 1;">
+        <ui:Label text="INFORME DE PRUEBA · DATOS GENERADOS" name="subtitulo" class="label-subtitulo" style="color: rgb(19, 45, 12); font-size: 32px; -unity-font-style: bold;"/>
+        <ui:Label text="Evolución del Paciente" name="titulo-principal" class="titulo-principal"/>
+        <ui:Label text="Paciente de prueba " name="descripcion" class="label-descripcion" style="-unity-font-style: bold; color: rgb(55, 55, 55);"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="selector-terapias" style="flex-grow: 1;">
+        <ui:Button text="Alcance" name="btn-terapia-1"/>
+        <ui:Button text="Agarre y soltar" name="btn-terapia-2"/>
+        <ui:Button text="Memoria de secuencias" name="btn-terapia-3"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="filtros-fecha" style="flex-grow: 1;">
+        <ui:Button text="Todo el período" name="btn-todo-periodo"/>
+        <ui:Button text="Últimos 7 días" name="btn-ultimos-7"/>
+        <ui:TextField label="Text Field" placeholder-text="filler text" name="input-hasta"/>
+        <ui:Label text="Hasta"/>
+        <ui:Label text="Desde"/>
+        <ui:TextField label="Text Field" placeholder-text="filler text" name="input-desde"/>
+    </ui:VisualElement>
+    <ui:VisualElement name="tarjetas-resumen" style="flex-grow: 1;">
+        <ui:VisualElement name="tarjeta-sesiones" style="flex-grow: 1;">
+            <ui:Label text="SESIONES" class="label-titulo-tarjeta"/>
+            <ui:Label text="0" name="valor-sesiones" class="valor-grande"/>
+            <ui:Label text="En el rango elegido" class="label-pie-tarjeta"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="tarjeta-dias" style="flex-grow: 1;">
+            <ui:Label text="DIAS CON TERAPIA" class="label-titulo-tarjeta"/>
+            <ui:Label text="0" name="valor-dias" class="valor-grande"/>
+            <ui:Label text="sin contar domingos" class="label-pie-tarjeta"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="tarjeta-eficacia" style="flex-grow: 1;">
+            <ui:Label text="EFICACIA PROMEDIO" class="label-titulo-tarjeta"/>
+            <ui:Label text="0" name="valor-eficacia" class="valor-grande"/>
+            <ui:Label text="Todas las sesiones" class="label-pie-tarjeta"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="seccion-grafica" style="flex-grow: 1;">
+        <ui:Label text="Eficacia promedio por día" class="titulo-seccion"/>
+        <ui:Label text="Cada punto es el promedio de las sesiones de ese día" class="label-subtitulo-seccion"/>
+        <ui:VisualElement name="grafica-container" style="flex-grow: 1;">
+            <ui:VisualElement name="eje-y" style="flex-grow: 1;">
+                <ui:Label text="100"/>
+                <ui:Label text="80"/>
+                <ui:Label text="60"/>
+                <ui:Label text="40"/>
+                <ui:Label text="20"/>
+                <ui:Label text="0"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="area-grafica" style="flex-grow: 1;">
+                <ui:VisualElement name="puntos-container" style="flex-grow: 1;"/>
+            </ui:VisualElement>
+            <ui:VisualElement name="etiquetas-x" style="flex-grow: 1;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="leyenda-grafica" style="flex-grow: 1;">
+            <ui:Label text="80% o más"/>
+            <ui:Label text="60 a 79%"/>
+            <ui:Label text="Menos de 60%"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="seccion-tabla" style="flex-grow: 1;">
+        <ui:VisualElement name="cabecera-tabla" style="flex-grow: 1;">
+            <ui:Label text="Label" name="titulo-dia-tabla" class="label-titulo-tabla"/>
+            <ui:Label text="Info del dia" class="label-info-tabla"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="encabezados-tabla" style="flex-grow: 1;">
+            <ui:Label text="SESIÓN"/>
+            <ui:Label text="HORA"/>
+            <ui:Label text="PUNTAJE"/>
+            <ui:Label text="PRECISIÓN"/>
+            <ui:Label text="ACIERTOS"/>
+            <ui:Label text="ERRORES"/>
+            <ui:Label text="TIEMPO"/>
+            <ui:Label text="DIFICULTAD"/>
+        </ui:VisualElement>
+        <ui:ScrollView name="cuerpo-tabla"/>
+    </ui:VisualElement>
+</ui:UXML>

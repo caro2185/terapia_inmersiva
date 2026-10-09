@@ -61,17 +61,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.3.12f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PruebaReportes\EscenaPruebaReportes.cs" />
     <Compile Include="Assets\Scritps\LoginManager.cs" />
+    <Compile Include="Assets\Scritps\DashboardEvolucion.cs" />
     <Compile Include="Assets\Scritps\ledTerapy.cs" />
     <Compile Include="Assets\Scritps\APIConnector.cs" />
+    <Compile Include="Assets\PruebaReportes\SesionDatos.cs" />
+    <Compile Include="Assets\Scritps\DatosDashboard.cs" />
     <Compile Include="Assets\Scritps\TerapeutaPanel.cs" />
+    <Compile Include="Assets\Models\SesionRequest.cs" />
+    <Compile Include="Assets\PruebaReportes\ReportesPaciente.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scritps\LoginPanel.cs" />
     <Compile Include="Assets\Scritps\PruebaGrafica.cs" />
+    <Compile Include="Assets\PruebaReportes\GraficaDiaria.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UI\styles.uss" />
+    <None Include="Assets\UI\DashboardStyles.uss" />
     <None Include="Assets\UI\Mimenu.uxml" />
+    <None Include="Assets\UI\DashboardEvolucion.uxml" />
+    <None Include="Assets\PruebaReportes\PruebaReportes.uss" />
+    <None Include="Assets\PruebaReportes\PruebaReportes.uxml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

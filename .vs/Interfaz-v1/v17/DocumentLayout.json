@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\karol\\Interfaz-v1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|c:\\users\\karol\\interfaz-v1\\assets\\pruebareportes\\escenapruebareportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\pruebareportes\\escenapruebareportes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\pruebareportes\\reportespaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\pruebareportes\\reportespaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|c:\\users\\karol\\interfaz-v1\\assets\\pruebareportes\\graficadiaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\pruebareportes\\graficadiaria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|c:\\users\\karol\\interfaz-v1\\assets\\scritps\\terapeutapanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\terapeutapanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\ui\\styles.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\styles.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\models\\sesionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\models\\sesionrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\scritps\\datosdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\datosdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\scritps\\dashboardevolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\dashboardevolucion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\scritps\\loginpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\loginpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\scritps\\pruebagrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\pruebagrafica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\ui\\dashboardstyles.uss||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\ui\\dashboardstyles.uss||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|C:\\Users\\karol\\Interfaz-v1\\assets\\scritps\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A67FC19-587A-3BC3-854A-59EA074F92B5}|Assembly-CSharp.csproj|solutionrelative:assets\\scritps\\apiconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GraficaDiaria.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\GraficaDiaria.cs",
+              "RelativeDocumentMoniker": "Assets\\PruebaReportes\\GraficaDiaria.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\GraficaDiaria.cs",
+              "RelativeToolTip": "Assets\\PruebaReportes\\GraficaDiaria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T17:06:50.474Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportesPaciente.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\ReportesPaciente.cs",
+              "RelativeDocumentMoniker": "Assets\\PruebaReportes\\ReportesPaciente.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\ReportesPaciente.cs",
+              "RelativeToolTip": "Assets\\PruebaReportes\\ReportesPaciente.cs",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAewBgBAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-01T20:36:13.199Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EscenaPruebaReportes.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\EscenaPruebaReportes.cs",
+              "RelativeDocumentMoniker": "Assets\\PruebaReportes\\EscenaPruebaReportes.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\PruebaReportes\\EscenaPruebaReportes.cs",
+              "RelativeToolTip": "Assets\\PruebaReportes\\EscenaPruebaReportes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T17:18:17.433Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TerapeutaPanel.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\TerapeutaPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\TerapeutaPanel.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\TerapeutaPanel.cs",
+              "RelativeToolTip": "Assets\\Scritps\\TerapeutaPanel.cs",
+              "ViewState": "AgIAAKACAAAAAAAAAAAqwKkCAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-08T15:32:54.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DatosDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\DatosDashboard.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\DatosDashboard.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\DatosDashboard.cs",
+              "RelativeToolTip": "Assets\\Scritps\\DatosDashboard.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwDMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T22:14:52.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DashboardEvolucion.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\DashboardEvolucion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\DashboardEvolucion.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\DashboardEvolucion.cs",
+              "RelativeToolTip": "Assets\\Scritps\\DashboardEvolucion.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAYwE0BAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-30T22:06:41.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "DashboardStyles.uss",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\UI\\DashboardStyles.uss",
+              "RelativeDocumentMoniker": "Assets\\UI\\DashboardStyles.uss",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\UI\\DashboardStyles.uss",
+              "RelativeToolTip": "Assets\\UI\\DashboardStyles.uss",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAqwEgBAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-09-30T22:00:20.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SesionRequest.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Models\\SesionRequest.cs",
+              "RelativeDocumentMoniker": "Assets\\Models\\SesionRequest.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Models\\SesionRequest.cs",
+              "RelativeToolTip": "Assets\\Models\\SesionRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-22T19:57:41.695Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PruebaGrafica.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\PruebaGrafica.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\PruebaGrafica.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\PruebaGrafica.cs",
+              "RelativeToolTip": "Assets\\Scritps\\PruebaGrafica.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAUAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-10T21:01:57.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "styles.uss",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\UI\\styles.uss",
+              "RelativeDocumentMoniker": "Assets\\UI\\styles.uss",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\UI\\styles.uss",
+              "RelativeToolTip": "Assets\\UI\\styles.uss",
+              "ViewState": "AgIAAHYCAAAAAAAAAAAswI0CAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-07-10T20:18:09.551Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LoginPanel.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\LoginPanel.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\LoginPanel.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\LoginPanel.cs",
+              "RelativeToolTip": "Assets\\Scritps\\LoginPanel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T19:42:32.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "APIConnector.cs",
+              "DocumentMoniker": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\APIConnector.cs",
+              "RelativeDocumentMoniker": "Assets\\Scritps\\APIConnector.cs",
+              "ToolTip": "C:\\Users\\karol\\Interfaz-v1\\Assets\\Scritps\\APIConnector.cs",
+              "RelativeToolTip": "Assets\\Scritps\\APIConnector.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-05T19:29:48.22Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
