@@ -5,3 +5,7 @@
 [Bb]uilds/
 [Ll]ogs/
 UserSettings/
+.vs/
+*.csproj
+*.sln
+UIElementsSchema/
