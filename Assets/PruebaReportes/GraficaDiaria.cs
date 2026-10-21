@@ -20,7 +20,7 @@ using UnityEngine.UIElements;
             public int cantidad;
             public string etiqueta;    // "30/09", "Hoy", "Ayer"
             public string diaSemana;   // "L", "M", "X"...
-            public string titulo;      // "Miércoles 30/09/2026" (tooltip)
+            public string titulo;      // "Miércoles 30/09/2026" (miTooltip)
         }
 
         public event Action<int> PuntoSeleccionado;
@@ -53,7 +53,7 @@ using UnityEngine.UIElements;
         Punto[] puntos = new Punto[0];
         int seleccionado = -1;
         readonly List<Label> textos = new List<Label>();
-        readonly Label tooltip;
+        readonly Label miTooltip;
 
         public GraficaDiaria()
         {
@@ -67,27 +67,27 @@ using UnityEngine.UIElements;
                 MarkDirtyRepaint();
             });
             RegisterCallback<PointerMoveEvent>(OnPointerMove);
-            RegisterCallback<PointerLeaveEvent>(evt => tooltip.style.display = DisplayStyle.None);
+            RegisterCallback<PointerLeaveEvent>(evt => miTooltip.style.display = DisplayStyle.None);
             RegisterCallback<ClickEvent>(OnClick);
 
-            tooltip = new Label();
-            tooltip.pickingMode = PickingMode.Ignore;
-            tooltip.style.position = Position.Absolute;
-            tooltip.style.display = DisplayStyle.None;
-            tooltip.style.whiteSpace = WhiteSpace.NoWrap;
-            tooltip.style.fontSize = 11;
-            tooltip.style.color = Color.white;
-            tooltip.style.backgroundColor = new Color(0f, 0f, 0f, 0.92f);
-            tooltip.style.paddingLeft = 8;
-            tooltip.style.paddingRight = 8;
-            tooltip.style.paddingTop = 4;
-            tooltip.style.paddingBottom = 4;
-            tooltip.style.unityTextAlign = TextAnchor.MiddleLeft;
-            tooltip.style.borderTopLeftRadius = 5;
-            tooltip.style.borderTopRightRadius = 5;
-            tooltip.style.borderBottomLeftRadius = 5;
-            tooltip.style.borderBottomRightRadius = 5;
-            Add(tooltip);
+            miTooltip = new Label();
+            miTooltip.pickingMode = PickingMode.Ignore;
+            miTooltip.style.position = Position.Absolute;
+            miTooltip.style.display = DisplayStyle.None;
+            miTooltip.style.whiteSpace = WhiteSpace.NoWrap;
+            miTooltip.style.fontSize = 11;
+            miTooltip.style.color = Color.white;
+            miTooltip.style.backgroundColor = new Color(0f, 0f, 0f, 0.92f);
+            miTooltip.style.paddingLeft = 8;
+            miTooltip.style.paddingRight = 8;
+            miTooltip.style.paddingTop = 4;
+            miTooltip.style.paddingBottom = 4;
+            miTooltip.style.unityTextAlign = TextAnchor.MiddleLeft;
+            miTooltip.style.borderTopLeftRadius = 5;
+            miTooltip.style.borderTopRightRadius = 5;
+            miTooltip.style.borderBottomLeftRadius = 5;
+            miTooltip.style.borderBottomRightRadius = 5;
+            Add(miTooltip);
         }
 
         // =========================================================
@@ -97,7 +97,7 @@ using UnityEngine.UIElements;
         {
             puntos = datos ?? new Punto[0];
             seleccionado = indiceSeleccionado;
-            tooltip.style.display = DisplayStyle.None;
+            miTooltip.style.display = DisplayStyle.None;
             ReconstruirTextos();
             MarkDirtyRepaint();
         }
@@ -280,7 +280,7 @@ using UnityEngine.UIElements;
 
             CrearTexto("Tiempo (días)", a.xMin, a.yMax + 36f, a.width, 14f, TextAnchor.UpperCenter, true);
 
-            tooltip.BringToFront();
+            miTooltip.BringToFront();
         }
 
         void CrearTexto(string texto, float x, float y, float w, float h, TextAnchor alineacion, bool negrita)
@@ -328,7 +328,7 @@ using UnityEngine.UIElements;
             int i = IndiceEn(evt.localPosition);
             if (i < 0)
             {
-                tooltip.style.display = DisplayStyle.None;
+                miTooltip.style.display = DisplayStyle.None;
                 return;
             }
 
@@ -337,15 +337,15 @@ using UnityEngine.UIElements;
             float x = PosX(a, i, puntos.Length);
             float y = PosY(a, pt.promedio);
 
-            tooltip.text = pt.titulo + "\n" +
+            miTooltip.text = pt.titulo + "\n" +
                            "Promedio " + pt.promedio.ToString("0") + "% · " + pt.cantidad + " sesiones\n" +
                            "Rango " + pt.minimo.ToString("0") + " a " + pt.maximo.ToString("0") + "%";
-            tooltip.style.left = Mathf.Clamp(x, 80f, Mathf.Max(80f, contentRect.width - 80f));
+            miTooltip.style.left = Mathf.Clamp(x, 80f, Mathf.Max(80f, contentRect.width - 80f));
 
             bool abajo = y < 90f;   // si no cabe arriba del punto, va debajo
-            tooltip.style.top = abajo ? y + 14f : y - 14f;
-            tooltip.style.translate = new Translate(Length.Percent(-50), Length.Percent(abajo ? 0 : -100));
-            tooltip.style.display = DisplayStyle.Flex;
+            miTooltip.style.top = abajo ? y + 14f : y - 14f;
+            miTooltip.style.translate = new Translate(Length.Percent(-50), Length.Percent(abajo ? 0 : -100));
+            miTooltip.style.display = DisplayStyle.Flex;
         }
 
         void OnClick(ClickEvent evt)

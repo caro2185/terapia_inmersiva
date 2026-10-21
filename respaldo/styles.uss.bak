@@ -1,0 +1,638 @@
+VisualElement {
+}
+
+.contenedor {
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.derecha {
+    flex-grow: 1;
+    background-color: rgb(22, 16, 16);
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    translate: 0% 0;
+    transition-duration: 0.5s;
+}
+
+.izq {
+    width: auto;
+    min-width: 300px;
+    max-width: 500px;
+    height: 100%;
+    background-color: rgb(40, 40, 40);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    background-image: url("project://database/Assets/imagenes/Logo-VERTICAL.png?fileID=21300000&guid=5f3011255afbbbe4c94fc9713e73c996&type=3#Logo-VERTICAL");
+    width: 200px;
+    height: 200px;
+    align-items: center;
+}
+
+.botones {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    -unity-text-align: upper-left;
+    width: 100%;
+    align-items: center;
+}
+
+.botones-menu {
+    background-color: rgba(98, 213, 51, 0.98);
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    width: 80%;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 0;
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    color: rgb(11, 10, 10);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+    align-items: stretch;
+    -unity-text-align: upper-center;
+}
+
+.botones-menu:hover {
+    background-color: rgb(57, 63, 57);
+    color: rgb(236, 231, 231);
+    width: 100%;
+}
+
+.footer-logo {
+    background-image: url("project://database/Assets/imagenes/gafas_realidad_virtual_meta_quest_2-removebg-preview.png?fileID=21300000&guid=aeb0c2cc124220f46aa033aea94ee243&type=3#gafas_realidad_virtual_meta_quest_2-removebg-preview");
+    width: 250px;
+    height: 100px;
+    margin-bottom: 10px;
+    -unity-text-align: upper-center;
+}
+
+.footer-texto {
+    margin-bottom: 30px;
+    color: rgb(243, 237, 237);
+    -unity-text-align: upper-center;
+    -unity-font-definition: url("project://database/Library/unity%20default%20resources?fileID=10102&guid=0000000000000000e000000000000000&type=0#LegacyRuntime");
+    white-space: normal;
+}
+
+.terapias {
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.terapias-titulo {
+    color: rgb(117, 186, 61);
+    font-size: 35px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    -unity-text-align: upper-center;
+    align-items: center;
+    justify-content: center;
+    -unity-slice-scale: 1px;
+    margin-left: 0;
+    text-overflow: clip;
+    white-space: pre-wrap;
+    -unity-font-style: normal;
+}
+
+.volver {
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    background-color: rgb(44, 205, 32);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    flex-wrap: nowrap;
+    width: 20%;
+    height: 10%;
+    -unity-font-style: bold;
+    font-size: 18px;
+    margin-bottom: 28px;
+}
+
+.terapy {
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.terapy123 {
+    width: 200px;
+    height: 250px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.terapyizq {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 0;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    align-self: center;
+}
+
+.terapy-dere {
+    height: 100%;
+    flex-grow: 1;
+}
+
+.derecha-activo {
+}
+
+.derecha.derecha-activo {
+}
+
+.login {
+    height: 100%;
+    align-items: center;
+    min-width: auto;
+    min-height: auto;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+    aspect-ratio: auto;
+}
+
+.letrasColor {
+    font-size: 20px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+    color: rgb(83, 224, 62);
+    -unity-text-align: middle-center;
+}
+
+#info-rendimiento {
+    font-size: 14px;
+    color: rgb(200, 200, 200);
+    -unity-text-align: middle-center;
+    margin-top: 15px;
+}
+
+#reportes-contenido {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 6px 16px;
+}
+
+.rp-tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.rp-tab {
+    background-color: rgb(40, 40, 50);
+    color: rgb(235, 240, 232);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin: 0 8px 8px 0;
+    -unity-font-style: bold;
+}
+
+.rp-tab:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-tab.rp-tab--activa {
+    background-color: rgb(108, 208, 46);
+    border-color: rgb(108, 208, 46);
+    color: rgb(20, 26, 18);
+}
+
+.rp-filtros {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.rp-campo {
+    margin: 0 10px 6px 0;
+}
+
+.rp-etq {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0 0 3px 0;
+    padding: 0;
+}
+
+.rp-fecha {
+    width: 112px;
+    margin: 0;
+}
+
+.rp-fecha .unity-base-text-field__input {
+    background-color: rgb(24, 24, 32);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+
+.rp-btn {
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 10px;
+    margin: 0 8px 6px 0;
+    font-size: 12px;
+}
+
+.rp-btn:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-btn.rp-btn--activo {
+    border-color: rgb(108, 208, 46);
+    background-color: rgba(108, 208, 46, 0.22);
+}
+
+.rp-error {
+    color: rgb(255, 90, 82);
+    font-size: 12px;
+    margin: 0 0 6px 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.rp-resumen {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 12px;
+    white-space: normal;
+    margin: 4px 0 10px 0;
+    padding: 0;
+}
+
+.rp-grafica {
+    background-color: rgb(24, 24, 32);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    min-height: 300px;
+    flex-direction: column;
+}
+
+.rp-leyenda {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8px 0 14px 0;
+}
+
+.rp-leyenda-item {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 12px 4px 0;
+}
+
+.rp-leyenda-texto {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0;
+    padding: 0;
+}
+
+.rp-punto {
+    width: 9px;
+    height: 9px;
+    border-radius: 5px;
+    margin-right: 6px;
+    flex-shrink: 0;
+}
+
+.rp-detalle {
+    margin-bottom: 12px;
+}
+
+.rp-detalle-cab {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.rp-detalle-textos {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.rp-detalle-titulo {
+    color: white;
+    font-size: 15px;
+    -unity-font-style: bold;
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.rp-detalle-sub {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
+    margin: 2px 0 0 0;
+    padding: 0;
+    white-space: normal;
+}
+
+.rp-nav {
+    flex-direction: row;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.rp-nav-btn {
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 4px 10px;
+    margin: 0 0 0 6px;
+    -unity-font-style: bold;
+}
+
+.rp-nav-btn:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.rp-nav-btn:disabled {
+    opacity: 0.35;
+}
+
+.rp-vacio {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    white-space: normal;
+    margin: 6px 0;
+}
+
+.rp-tabla {
+    background-color: rgb(24, 24, 32);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.rp-fila {
+    flex-direction: row;
+    flex-shrink: 0;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.rp-fila:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.rp-fila--cab {
+    background-color: rgb(36, 40, 46);
+}
+
+.rp-fila--pie {
+    background-color: rgb(36, 40, 46);
+    border-bottom-width: 0;
+}
+
+.rp-celda {
+    color: rgb(225, 232, 222);
+    font-size: 12px;
+    -unity-text-align: middle-left;
+    white-space: nowrap;
+    margin: 0;
+    padding: 7px 6px;
+    flex-shrink: 0;
+}
+
+.rp-fila--cab .rp-celda {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 10px;
+    -unity-font-style: bold;
+}
+
+.rp-fila--pie .rp-celda,
+.rp-fila--pie .rp-celda-texto {
+    -unity-font-style: bold;
+}
+
+.rp-celda--alerta {
+    color: rgb(255, 110, 100);
+}
+
+.rp-celda--notas {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.rp-celda-puntaje {
+    flex-direction: row;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0 6px;
+}
+
+.rp-celda-texto {
+    color: rgb(225, 232, 222);
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+#contenido-terapeuta {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 16px 20px;
+}
+
+#barra-superior {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+#barra-superior > .unity-label {
+    font-size: 22px;
+    color: rgb(108, 208, 46);
+    -unity-text-align: middle-left;
+}
+
+#acciones-globales {
+    flex-direction: row;
+    align-items: center;
+}
+
+#cuerpo {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 320px;
+}
+
+#columna-pacientes {
+    width: 34%;
+    min-width: 220px;
+    margin-right: 16px;
+    padding: 12px;
+    background-color: rgb(30, 31, 42);
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+#columna-pacientes > .unity-label {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    -unity-text-align: middle-left;
+    margin-bottom: 8px;
+}
+
+#lista-pacientes {
+    flex-grow: 1;
+}
+
+#columna-detalle {
+    flex-grow: 1;
+    padding: 16px;
+    background-color: rgb(30, 31, 42);
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+#detalle-vacio {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+#detalle-vacio > .unity-label {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#detalle-paciente {
+    flex-grow: 1;
+}
+
+#lbl-paciente-nombre {
+    font-size: 20px;
+    color: white;
+    -unity-font-style: bold;
+    margin-bottom: 14px;
+}
+
+#acciones-paciente {
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#barra-dev {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 12px;
+    opacity: 0.7;
+}
+
+#btn-abrir-registro,
+#btn-cerrar-sesion-terapeuta,
+#btn-ver-reportes,
+#btn-configurar,
+#btn-guardar-prueba {
+    background-color: rgb(40, 40, 50);
+    color: rgb(235, 240, 232);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    padding: 8px 16px;
+    margin: 0 8px 0 0;
+    -unity-font-style: bold;
+}
+
+#btn-abrir-registro:hover,
+#btn-cerrar-sesion-terapeuta:hover,
+#btn-ver-reportes:hover,
+#btn-configurar:hover,
+#btn-guardar-prueba:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+#btn-abrir-registro,
+#btn-ver-reportes {
+    background-color: rgb(108, 208, 46);
+    border-color: rgb(108, 208, 46);
+    color: rgb(20, 26, 18);
+}
+
+#btn-cerrar-sesion-terapeuta {
+    background-color: transparent;
+    margin-right: 0;
+}
+
+.unity-text-field__input {
+    color: white;
+    background-color: rgb(30, 31, 42);
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.unity-button {
+    border-radius: 8px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
+}

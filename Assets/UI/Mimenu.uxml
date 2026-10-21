@@ -4,7 +4,7 @@
         <ui:VisualElement name="izquierda" class="izq" style="flex-grow: 1; background-color: rgb(24, 23, 23);">
             <ui:VisualElement name="logo" class="logo" style="flex-grow: 1;"/>
             <ui:VisualElement name="botones" class="botones" style="flex-grow: 1;">
-                <ui:Button text="Inicio de sesión" name="jugar" class="botones-menu" style="height: 56px;"/>
+                <ui:Button text="Inicio de sesión" name="jugar" class="botones-menu" style="height: 56px; transition-duration: 0.5s;"/>
                 <ui:Button text="Terapias" name="terapias" class="botones-menu" style="display: none;"/>
                 <ui:Button text="Manual" name="jugar" class="botones-menu"/>
             </ui:VisualElement>
@@ -42,14 +42,23 @@
                 </ui:VisualElement>
                 <ui:VisualElement name="cuerpo">
                     <ui:VisualElement name="columna-pacientes">
-                        <ui:Label text="MIS PACIENTES" class="letrasColor"/>
-                        <ui:ScrollView name="lista-pacientes"/>
+                        <ui:Label text="MIS PACIENTES" class="letrasColor" style="-unity-font-style: bold;"/>
+                        <ui:VisualElement name="contenedor-busqueda" style="flex-grow: 1;">
+                            <ui:Label text="Buscar pacientes por cédula" class="letrasColor" style="-unity-font-style: normal; white-space: normal; width: 100%;"/>
+                            <ui:TextField label="INGRESE CÉDULA" placeholder-text="" name="input-busqueda" style="background-color: rgb(30, 31, 42); color: rgb(245, 245, 245); width: 100%; height: 35px; margin-top: 5px; margin-bottom: 5px;"/>
+                            <ui:Button text="BUSCAR" name="btn-buscar" class="letrasColor" style="width: 100%; height: 35px;"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="resultado-paciente" class="letrasColor" style="flex-grow: 1; display: none; padding-top: 10px; padding-right: 10px; padding-bottom: 10px; padding-left: 10px; margin-top: 15px; white-space: normal; justify-content: flex-start;">
+                            <ui:Label text="Label" name="lbl-resultado-nombre" style="margin-bottom: 5px;"/>
+                            <ui:Label text="Label" name="lbl-resultado-edad" style="margin-bottom: 5px;"/>
+                            <ui:Label text="Label" name="lbl-resultado-sesion" style="margin-bottom: 5px; white-space: normal;"/>
+                        </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="columna-detalle">
                         <ui:VisualElement name="detalle-vacio">
                             <ui:Label text="Selecciona un paciente de la lista"/>
                         </ui:VisualElement>
-                        <ui:VisualElement name="detalle-paciente">
+                        <ui:VisualElement name="detalle-paciente" style="align-items: flex-start; padding-top: 20px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px;">
                             <ui:Label text="Paciente" name="lbl-paciente-nombre"/>
                             <ui:VisualElement name="acciones-paciente">
                                 <ui:Button text="VER REPORTES" name="btn-ver-reportes"/>

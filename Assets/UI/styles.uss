@@ -78,7 +78,7 @@ VisualElement {
 .botones-menu:hover {
     background-color: rgb(57, 63, 57);
     color: rgb(236, 231, 231);
-    width: 115%;
+    width: 100%;
 }
 
 .footer-logo {
@@ -211,12 +211,6 @@ VisualElement {
     -unity-text-align: middle-center;
 }
 
-
-/* ============================================
-   GRÁFICA DE PUNTOS DISCRETOS
-   ============================================ */
-
-/* Info de rendimiento */
 #info-rendimiento {
     font-size: 14px;
     color: rgb(200, 200, 200);
@@ -224,21 +218,12 @@ VisualElement {
     margin-top: 15px;
 }
 
-
-/* ============================================================
-   REPORTES: pegar al FINAL de styles.uss
-   Antes, borrar las reglas viejas de la gráfica:
-   #puntos-container, #etiquetas-eje-x, .punto-grafico (y :hover),
-   .puntaje-tooltip (y :hover), .etiqueta-sesion-x, .label-eje, .plano-prueba
-   ============================================================ */
-
 #reportes-contenido {
     flex-grow: 1;
     flex-shrink: 1;
     margin: 6px 16px;
 }
 
-/* ---------- Pestañas de terapia ---------- */
 .rp-tabs {
     flex-direction: row;
     flex-wrap: wrap;
@@ -266,7 +251,6 @@ VisualElement {
     color: rgb(20, 26, 18);
 }
 
-/* ---------- Filtros de fecha ---------- */
 .rp-filtros {
     flex-direction: row;
     flex-wrap: wrap;
@@ -328,7 +312,6 @@ VisualElement {
     white-space: normal;
 }
 
-/* ---------- Resumen ---------- */
 .rp-resumen {
     color: rgba(255, 255, 255, 0.75);
     font-size: 12px;
@@ -337,7 +320,6 @@ VisualElement {
     padding: 0;
 }
 
-/* ---------- Gráfica ---------- */
 .rp-grafica {
     background-color: rgb(24, 24, 32);
     border-radius: 8px;
@@ -375,7 +357,6 @@ VisualElement {
     flex-shrink: 0;
 }
 
-/* ---------- Detalle del día ---------- */
 .rp-detalle {
     margin-bottom: 12px;
 }
@@ -441,7 +422,6 @@ VisualElement {
     margin: 6px 0;
 }
 
-/* ---------- Tabla ---------- */
 .rp-tabla {
     background-color: rgb(24, 24, 32);
     border-radius: 8px;
@@ -512,9 +492,6 @@ VisualElement {
     padding: 0;
 }
 
-/* ============================================================
-   PANEL DEL TERAPEUTA
-   ============================================================ */
 #contenido-terapeuta {
     flex-direction: column;
     align-items: stretch;
@@ -522,7 +499,6 @@ VisualElement {
     padding: 16px 20px;
 }
 
-/* ---------- Barra superior ---------- */
 #barra-superior {
     flex-direction: row;
     justify-content: space-between;
@@ -541,7 +517,6 @@ VisualElement {
     align-items: center;
 }
 
-/* ---------- Cuerpo: lista a la izquierda, detalle a la derecha ---------- */
 #cuerpo {
     flex-direction: row;
     flex-grow: 1;
@@ -607,7 +582,6 @@ VisualElement {
     align-items: flex-start;
 }
 
-/* ---------- Franja de desarrollo (se borra al unir con las escenas) ---------- */
 #barra-dev {
     flex-direction: row;
     justify-content: flex-end;
@@ -615,7 +589,6 @@ VisualElement {
     opacity: 0.7;
 }
 
-/* ---------- Botones del panel ---------- */
 #btn-abrir-registro,
 #btn-cerrar-sesion-terapeuta,
 #btn-ver-reportes,
@@ -639,7 +612,6 @@ VisualElement {
     border-color: rgb(108, 208, 46);
 }
 
-/* Acciones principales en verde */
 #btn-abrir-registro,
 #btn-ver-reportes {
     background-color: rgb(108, 208, 46);
@@ -647,8 +619,20 @@ VisualElement {
     color: rgb(20, 26, 18);
 }
 
-/* Cerrar sesión, discreto */
 #btn-cerrar-sesion-terapeuta {
     background-color: transparent;
     margin-right: 0;
+}
+
+.unity-text-field__input {
+    color: white;
+    background-color: rgb(30, 31, 42);
+    border-radius: 8px;
+    padding-left: 10px;
+}
+
+.unity-button {
+    border-radius: 8px;
+    -unity-font-style: bold;
+    -unity-text-align: middle-center;
 }
