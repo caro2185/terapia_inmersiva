@@ -636,3 +636,237 @@ VisualElement {
     -unity-font-style: bold;
     -unity-text-align: middle-center;
 }
+
+/* ============================================================
+   CONFIGURAR TERAPIAS
+   Elementos fijos: se estilan por nombre (#).
+   Elementos creados por el código: se estilan por clase (.cfg-).
+   ============================================================ */
+
+/* ---------- Panel superpuesto ---------- */
+#panel-config-terapias {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.59);
+    align-items: center;
+    justify-content: center;
+}
+
+#tarjeta-config {
+    width: 92%;
+    height: 92%;
+    background-color: rgb(30, 30, 30);
+    border-radius: 12px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+/* ---------- Cabecera ---------- */
+#cabecera-config {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+#lbl-config-titulo {
+    font-size: 24px;
+    color: rgb(108, 208, 46);
+    -unity-font-definition: url("project://database/Assets/Fonts/Orbitron-Regular.ttf?fileID=12800000&guid=0f11804e4dba3704d975b2c9b97ef037&type=3#Orbitron-Regular");
+}
+
+#btn-cerrar-config {
+    width: 36px;
+    height: 36px;
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    -unity-font-style: bold;
+    margin: 0;
+}
+
+#btn-cerrar-config:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+/* ---------- Cuerpo: dos columnas ---------- */
+#cuerpo-config {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#columna-lista-terapias,
+#columna-detalle-terapia {
+    padding: 12px;
+    background-color: rgb(30, 31, 42);
+    border-radius: 12px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.08);
+}
+
+#columna-lista-terapias {
+    width: 32%;
+    min-width: 220px;
+    margin-right: 16px;
+}
+
+#columna-detalle-terapia {
+    flex-grow: 1;
+    padding: 16px;
+}
+
+#lista-terapias,
+#detalle-scroll {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* Etiquetas pequeñas: TERAPIAS DISPONIBLES, NIVEL, VARIABLES */
+.cfg-etq {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+    -unity-font-style: bold;
+    margin: 10px 0 6px 0;
+}
+
+/* ---------- Lista de terapias (tarjetas que crea el código) ---------- */
+.cfg-ter {
+    background-color: rgb(40, 40, 50);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.12);
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+}
+
+.cfg-ter:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+.cfg-ter--activa {
+    border-color: rgb(108, 208, 46);
+    background-color: rgba(108, 208, 46, 0.18);
+}
+
+.cfg-ter-n {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cfg-ter-nombre {
+    font-size: 16px;
+    color: white;
+    -unity-font-style: bold;
+}
+
+/* ---------- Detalle de la terapia ---------- */
+#lbl-terapia-nombre {
+    font-size: 22px;
+    color: white;
+    -unity-font-style: bold;
+    margin-bottom: 4px;
+}
+
+#lbl-terapia-objetivo {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    white-space: normal;
+    margin-bottom: 6px;
+}
+
+/* ---------- Niveles ---------- */
+#niveles-config {
+    flex-direction: row;
+    margin-bottom: 6px;
+}
+
+#btn-nivel-baja,
+#btn-nivel-media,
+#btn-nivel-alta {
+    background-color: rgb(40, 40, 50);
+    color: white;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    padding: 6px 16px;
+    margin: 0 8px 0 0;
+}
+
+#btn-nivel-baja:hover,
+#btn-nivel-media:hover,
+#btn-nivel-alta:hover {
+    border-color: rgb(108, 208, 46);
+}
+
+/* Nivel elegido: el código le agrega la clase cfg-nivel--activo.
+   Va con # para ganarle a las reglas de arriba. */
+#btn-nivel-baja.cfg-nivel--activo,
+#btn-nivel-media.cfg-nivel--activo,
+#btn-nivel-alta.cfg-nivel--activo {
+    background-color: rgb(108, 208, 46);
+    border-color: rgb(108, 208, 46);
+    color: rgb(20, 26, 18);
+    -unity-font-style: bold;
+}
+
+/* ---------- Variables (filas que crea el código) ---------- */
+.cfg-var {
+    margin-bottom: 10px;
+}
+
+.cfg-var-cab {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cfg-var-etq {
+    font-size: 13px;
+    color: rgb(225, 232, 222);
+}
+
+.cfg-var-valor {
+    font-size: 13px;
+    color: rgb(108, 208, 46);
+    -unity-font-style: bold;
+}
+
+.cfg-slider {
+    margin: 4px 0 0 0;
+}
+
+/* ---------- Pie: estado y botón ---------- */
+#pie-config {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+#lbl-config-estado {
+    font-size: 12px;
+    color: rgb(255, 150, 90);
+    white-space: normal;
+    flex-shrink: 1;
+}
+
+#btn-ver-terapia {
+    background-color: rgb(108, 208, 46);
+    color: rgb(20, 26, 18);
+    border-width: 1px;
+    border-color: rgb(108, 208, 46);
+    border-radius: 8px;
+    padding: 8px 18px;
+    margin: 0;
+    -unity-font-style: bold;
+}
+
+#btn-ver-terapia:hover {
+    border-color: white;
+}

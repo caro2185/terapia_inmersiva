@@ -1,0 +1,179 @@
+{
+  "terapias": [
+    {
+      "id": 1,
+      "nombre": "Alcance",
+      "objetivo": "Mejorar el rango de movimiento del brazo alcanzando objetivos en el espacio.",
+      "escena": "Terapia_Alcance",
+      "variables": [
+        {
+          "clave": "cantidadObjetivos",
+          "etiqueta": "Cantidad de objetivos",
+          "unidad": "",
+          "min": 3,
+          "max": 15,
+          "paso": 1,
+          "porNivel": {
+            "baja": 5,
+            "media": 8,
+            "alta": 12
+          }
+        },
+        {
+          "clave": "distanciaObjetivo",
+          "etiqueta": "Distancia del objetivo",
+          "unidad": "cm",
+          "min": 20,
+          "max": 80,
+          "paso": 5,
+          "porNivel": {
+            "baja": 30,
+            "media": 50,
+            "alta": 70
+          }
+        },
+        {
+          "clave": "duracionMin",
+          "etiqueta": "Duración de la sesión",
+          "unidad": "min",
+          "min": 5,
+          "max": 30,
+          "paso": 1,
+          "porNivel": {
+            "baja": 10,
+            "media": 15,
+            "alta": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Agarre",
+      "objetivo": "Mejorar la precisión al tomar y soltar objetos.",
+      "escena": "TerapiaAgarreObjetos",
+      "variables": [
+        {
+          "clave": "cantidadObjetos",
+          "etiqueta": "Cantidad de objetos",
+          "unidad": "",
+          "min": 1,
+          "max": 10,
+          "paso": 1,
+          "porNivel": {
+            "baja": 3,
+            "media": 5,
+            "alta": 8
+          }
+        },
+        {
+          "clave": "tamanoObjeto",
+          "etiqueta": "Tamaño del objeto",
+          "unidad": "cm",
+          "min": 2,
+          "max": 12,
+          "paso": 1,
+          "porNivel": {
+            "baja": 9,
+            "media": 6,
+            "alta": 4
+          }
+        },
+        {
+          "clave": "duracionMin",
+          "etiqueta": "Duración de la sesión",
+          "unidad": "min",
+          "min": 5,
+          "max": 30,
+          "paso": 1,
+          "porNivel": {
+            "baja": 10,
+            "media": 15,
+            "alta": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nombre": "Secuencias",
+      "objetivo": "Ejercitar la memoria repitiendo secuencias de movimientos.",
+      "escena": "EscenaSecuencias",
+      "variables": [
+        {
+          "clave": "longitudSecuencia",
+          "etiqueta": "Longitud de la secuencia",
+          "unidad": "pasos",
+          "min": 2,
+          "max": 10,
+          "paso": 1,
+          "porNivel": {
+            "baja": 3,
+            "media": 5,
+            "alta": 7
+          }
+        },
+        {
+          "clave": "tiempoRespuesta",
+          "etiqueta": "Tiempo de respuesta",
+          "unidad": "s",
+          "min": 2,
+          "max": 15,
+          "paso": 1,
+          "porNivel": {
+            "baja": 10,
+            "media": 6,
+            "alta": 4
+          }
+        },
+        {
+          "clave": "duracionMin",
+          "etiqueta": "Duración de la sesión",
+          "unidad": "min",
+          "min": 5,
+          "max": 30,
+          "paso": 1,
+          "porNivel": {
+            "baja": 10,
+            "media": 15,
+            "alta": 20
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nombre": "Espejo",
+      "objetivo": "Trabajar el brazo afectado imitando el movimiento del brazo sano.",
+      "escena": "Terapia_espejo",
+      "variables": [
+        {
+          "clave": "velocidadMovimiento",
+          "etiqueta": "Velocidad de movimiento",
+          "unidad": "%",
+          "min": 20,
+          "max": 100,
+          "paso": 5,
+          "porNivel": {
+            "baja": 40,
+            "media": 60,
+            "alta": 80
+          }
+        },
+        {
+          "clave": "duracionMin",
+          "etiqueta": "Duración de la sesión",
+          "unidad": "min",
+          "min": 5,
+          "max": 30,
+          "paso": 1,
+          "porNivel": {
+            "baja": 10,
+            "media": 15,
+            "alta": 20
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -88,6 +88,38 @@
                         <ui:ScrollView name="reportes-contenido" horizontal-scroller-visibility="Hidden" style="flex-grow: 1;"/>
                     </ui:VisualElement>
                 </ui:VisualElement>
+            <ui:VisualElement name="panel-config-terapias">
+                <ui:VisualElement name="tarjeta-config">
+                    <ui:VisualElement name="cabecera-config">
+                        <ui:Label text="Configurar terapias" name="lbl-config-titulo"/>
+                        <ui:Button text="X" name="btn-cerrar-config"/>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="cuerpo-config">
+                        <ui:VisualElement name="columna-lista-terapias">
+                            <ui:Label text="TERAPIAS DISPONIBLES" class="cfg-etq"/>
+                            <ui:ScrollView name="lista-terapias"/>
+                        </ui:VisualElement>
+                        <ui:VisualElement name="columna-detalle-terapia">
+                            <ui:ScrollView name="detalle-scroll">
+                                <ui:Label text="Terapia" name="lbl-terapia-nombre"/>
+                                <ui:Label text="Objetivo" name="lbl-terapia-objetivo"/>
+                                <ui:Label text="NIVEL" class="cfg-etq"/>
+                                <ui:VisualElement name="niveles-config">
+                                    <ui:Button text="Baja" name="btn-nivel-baja"/>
+                                    <ui:Button text="Media" name="btn-nivel-media"/>
+                                    <ui:Button text="Alta" name="btn-nivel-alta"/>
+                                </ui:VisualElement>
+                                <ui:Label text="VARIABLES" class="cfg-etq"/>
+                                <ui:VisualElement name="contenedor-variables"/>
+                            </ui:ScrollView>
+                            <ui:VisualElement name="pie-config">
+                                <ui:Label text="" name="lbl-config-estado"/>
+                                <ui:Button text="VER TERAPIA" name="btn-ver-terapia"/>
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

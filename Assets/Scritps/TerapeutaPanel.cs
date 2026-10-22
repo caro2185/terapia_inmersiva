@@ -30,6 +30,7 @@ public class TerapeutaPanel : MonoBehaviour
 
     // ---- Reportes ----
     private ReportesPaciente reportes;
+    private ConfigTerapias configTerapias;
     private bool usarJsonPrueba = true;
 
     // Campos del formulario
@@ -54,6 +55,7 @@ public class TerapeutaPanel : MonoBehaviour
         btnGuardarPrueba = root.Q<Button>("btn-guardar-prueba");
         panelReportes = root.Q<VisualElement>("panel-reportes");
         reportes = new ReportesPaciente(root);
+        configTerapias = new ConfigTerapias(root);
 
         // Campos del formulario de registro
         regCedula = root.Q<TextField>("reg-cedula");
@@ -103,6 +105,18 @@ public class TerapeutaPanel : MonoBehaviour
                 {
                     MostrarMensajeRegistro("Selecciona un paciente primero", false);
                 }
+            };
+        }
+
+        // Botón CONFIGURAR TERAPIAS
+        Button btnConfigurar = root.Q<Button>("btn-configurar");
+        if (btnConfigurar != null)
+        {
+            btnConfigurar.clicked += () => {
+                if (pacienteSeleccionado != null)
+                    configTerapias.Abrir(pacienteSeleccionado);
+                else
+                    MostrarMensajeRegistro("Selecciona un paciente primero", false);
             };
         }
 
